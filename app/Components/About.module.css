@@ -1,0 +1,128 @@
+.container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: var(--about-height);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 20px 48px;
+  box-sizing: border-box;
+
+  backdrop-filter: blur(8px);
+  background: var(--bg);
+  border-top: 1px solid rgba(var(--text-rgb), 0.08);
+
+  z-index: 20; /* BELOW buttons */
+}
+
+/* ---- LEFT SIDE ---- */
+.leftside {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Smaller inside box */
+.insidebox {
+  padding: 10px 16px;
+
+  background: rgba(var(--text-rgb), 0.05);
+  border: 1px solid rgba(var(--text-rgb), 0.12);
+
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+
+  box-shadow: 0 0 10px rgba(var(--text-rgb), 0.1);
+}
+
+/* ---- HEADER TEXT ---- */
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.text {
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.year {
+  font-size: 14px;
+  opacity: 0.7;
+  color: var(--text);
+}
+
+/* ---- MID IMAGE ---- */
+.mid {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.mid img {
+  border-radius: 12px;
+  box-shadow: 0 0 16px rgba(var(--text-rgb), 0.2);
+  width: 85px;
+  height: auto;
+}
+
+/* ---- RIGHT SIDE ---- */
+.rightside {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 14px;
+}
+
+/* ---- BUTTONS ---- */
+.btn {
+  background: rgba(var(--text-rgb), 0.08);
+  border: 1px solid rgba(var(--text-rgb), 0.18);
+
+  padding: 12px;
+  border-radius: 8px;
+
+  cursor: pointer;
+  font-size: 22px;
+  color: var(--text);
+
+  backdrop-filter: blur(5px);
+  transition: 0.25s ease;
+
+  box-shadow: 0 0 8px rgba(var(--text-rgb), 0.1);
+}
+
+.btn:hover {
+  background: rgba(var(--text-rgb), 0.15);
+  border-color: var(--text);
+  transform: translateY(-4px);
+  box-shadow: 0 0 14px rgba(var(--text-rgb), 0.25);
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    gap: 20px;
+    height: auto;
+    position: relative;
+  }
+
+  .mid {
+    order: -1;
+  }
+
+  .rightside {
+    justify-content: center;
+  }
+}

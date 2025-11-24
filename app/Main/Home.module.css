@@ -1,0 +1,90 @@
+
+
+/* FULL PAGE */
+.page {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  height: 0px;
+  background: var(--bg);
+  color: var(--text);
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  /* ❤️ Leave space for fixed About footer */
+  padding-bottom: var(--about-height);
+
+  box-sizing: border-box;
+}
+
+/* LEFT SIDEBAR */
+.sidebar {
+  width: 260px;
+  height: 100vh;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  
+  padding: 20px;
+  overflow-y: auto;
+
+  border-right: 1px solid rgba(var(--text-rgb), 0.12);
+  z-index: 300;
+}
+
+/* MAIN RIGHT PANEL */
+.main {
+  margin-left: 260px;
+  width: calc(100% - 260px);
+
+  min-height: 100vh;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* TOP AREA (scrollable) */
+.sectionsWrapper {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 6px;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* BEFORE SEARCHING */
+.placeholder {
+  width: 100%;
+  padding: 40px;
+  border-radius: 14px;
+  background: rgba(var(--text-rgb), 0.08);
+  text-align: center;
+  font-size: 1.2rem;
+  opacity: 0.7;
+}
+
+/* BUTTONS BAR (stays above About footer) */
+.buttonsWrapper {
+  height: 70px;
+  width: 100%;
+
+  flex-shrink: 0;
+  position: relative;   /* so z-index works */
+  z-index: 30;          /* higher than About footer */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: var(--card);
+  border-radius: 14px;
+  border: 1px solid rgba(var(--text-rgb), 0.12);
+
+  box-shadow: 0 -4px 10px rgba(0,0,0,0.06);
+}

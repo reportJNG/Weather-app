@@ -1,0 +1,72 @@
+.containerbuttons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* MAIN ROUND BUTTON (MAP ICON) */
+.mainbtn {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  border: none;
+  outline: none;
+
+  background: var(--card);
+  color: var(--text);
+  font-size: 1.4rem;
+
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+
+  transition: 
+    transform 0.15s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.mainbtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22);
+  background: rgba(var(--text-rgb), 0.1);
+}
+
+.mainbtn:active {
+  transform: scale(0.92);
+}
+
+/* RECTANGULAR "More +" BUTTON */
+.profolio {
+  padding: 10px 18px;
+
+  background: var(--card);
+  color: var(--text);
+  border-radius: 12px;
+  border: 1px solid rgba(var(--text-rgb), 0.12);
+
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition:
+    background 0.2s ease,
+    transform 0.15s ease,
+    box-shadow 0.2s ease;
+}
+
+.profolio:hover {
+  background: rgba(var(--text-rgb), 0.08);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+}
+
+.profolio:active {
+  transform: scale(0.95);
+}
