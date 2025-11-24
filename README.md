@@ -1,36 +1,173 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🌦️ Weather App – Next.js + TypeScript
 
-## Getting Started
+A modern, fast, and clean Weather Application built using Next.js (App Router), TypeScript, and WeatherAPI.
+The UI is minimal, responsive, and theme-friendly (light/dark mode), with animated components and a sidebar layout.
 
-First, run the development server:
+✨ Features
+🔍 Real-Time Weather Search
 
-```bash
+Enter any country or city and get:
+
+🌍 Country
+
+🏙️ City
+
+🗺️ Region
+
+⏱️ Timezone
+
+🕒 Local time
+
+🌡️ Temperature (°C)
+
+🌤️ Weather type
+
+🖼️ Condition icon
+
+🎨 Modern UI/UX
+
+Clean glassmorphic cards
+
+Sidebar navigation
+
+Smooth transitions
+
+Responsive on all devices
+
+⚡ Tech Stack
+
+Next.js 14+ (App Router)
+
+TypeScript
+
+CSS Modules
+
+WeatherAPI
+
+React Hooks
+
+📦 Installation
+
+Clone the repository:
+
+git clone https://github.com/your-username/weather-app
+cd weather-app
+
+
+Install dependencies:
+
+npm install
+
+
+Create a .env.local file:
+
+WEATHER_API_KEY=your_api_key_here
+
+
+Run the development server:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+📁 Project Structure
+/
+├── app/
+│   ├── api/
+│   │   └── weather/
+│   │       └── route.ts
+│   ├── Components/
+│   │   ├── Header/
+│   │   ├── About/
+│   ├── Main/
+│   │   ├── Home.tsx
+│   │   ├── Leftsection/
+│   │   ├── Button/
+│   │   ├── Sections/
+│   │   └── types/
+│   ├── globals.css
+│   └── page.tsx
+├── public/
+├── README.md
+└── package.json
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+🔗 API Route Example
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+GET /api/weather?q=London
 
-## Learn More
+Returns:
 
-To learn more about Next.js, take a look at the following resources:
+{
+  "data": {
+    "country": "United Kingdom",
+    "city": "London",
+    "region": "City of London",
+    "timezone": "Europe/London",
+    "localtime": "2025-11-22 14:25",
+    "temp": 12.3,
+    "weatherType": "Cloudy",
+    "icon": "//cdn.weatherapi.com/weather/64x64/day/116.png"
+  }
+}
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+🧩 Example WeatherInfo Type
+export type WeatherInfo = {
+  country: string;
+  city: string;
+  region: string;
+  timezone: string;
+  localtime: string;
+  temp: number;
+  weatherType: string;
+  icon: string;
+};
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+🖥️ UI Preview (Description)
+📌 Sidebar
 
-## Deploy on Vercel
+A fixed menu on the left where you search for a country.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+📌 Main Panel
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Shows:
+
+Weather card
+
+Temperature
+
+Weather icon
+
+All data in a decorated info list
+
+📌 Bottom Buttons
+
+🌍 Map/location search
+
+➕ More
+
+🚀 Deployment
+
+Easily deploy to Vercel:
+
+vercel
+
+
+Make sure to add the environment variable on Vercel:
+
+WEATHER_API_KEY=your_api_key
+
+⭐ Future Improvements
+
+5-day forecast
+
+Animated backgrounds
+
+Auto-detect user location
+
+Saving last search
+
+Switching °C / °F
+
+👤 Author
+
+remali hamza
+🔗 Portfolio: https://remalihamza.vercel.app/
+📧 Email: hamzaremali10@gmail.com
